@@ -1,0 +1,67 @@
+body{
+    display: flex;
+    min-height: 100vh;
+    background-image: url(./assests/bg.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+}
+.main
+{
+    border: 2px solid white;
+    border-radius: 30px;
+    padding: 20px 30px;
+    height: 400px;
+    width: 400px;
+    backdrop-filter: blur(100px);
+}
+.box
+{
+    padding: 10px 20px;
+}
+h1{
+    text-align: center;
+    color: #14c3cc;
+    font-family: Arial;
+}
+.box{
+    padding: 30px 50px;
+}
+form{
+    color: aliceblue;
+}
+#button{
+    margin-left: 100px;
+    margin-top: 80px;
+    width: 90px;
+    height: 40px;
+    border-radius: 17px;
+    border: 1px solid white;
+    color: white;
+    background-color: #F7418F;
+}
+#username{
+    
+    
+    
+    height: 30px;
+    width: 250px;
+    border:1px solid white;
+  
+    border-radius: 20px;
+  
+
+}
+#password{
+    
+      
+    height: 30px;
+    width: 250px;
+    border:1px solid white;
+ 
+    border-radius: 20px;
+}
+h3{
+    color: #14c3cc;
+}

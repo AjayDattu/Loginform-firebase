@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="main">
+        <div class="box">
+        <form >
+            <h1>Login Form</h1>
+           <div class="emailbox">
+            <h3>username</h3>
+            <input type="text" id="username" >
+           </div>
+           <div class="pass">
+            <h3>password</h3>
+            <input type="password" id="password"s>
+           </div>
+           <input type="submit" id="button">
+            </form>
+
+                   
+          
+        </div>
+    </div>
+   
+        <script type="module">
+ 
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-app.js";
+        import { getDatabase, ref, set, get, child } from "https://www.gstatic.com/firebasejs/10.8.1/firebase-database.js";
+
+        
+        const firebaseConfig = {
+            apiKey: "AIzaSyD8u8ez4Dp6PLrJbbr6FA1-a6VWKNvI9YY",
+            authDomain: "inbound-fulcrum-396809.firebaseapp.com",
+            projectId: "inbound-fulcrum-396809",
+            storageBucket: "inbound-fulcrum-396809.appspot.com",
+            messagingSenderId: "153492128619",
+            appId: "1:153492128619:web:7cbe7f1a5e3976919a822e"
+        };
+        const app = initializeApp(firebaseConfig);
+        const db = getDatabase(app);
+
+        document.getElementById("button").addEventListener('click', function(e){
+        e.preventDefault();
+        set(ref(db, 'user/' + document.getElementById("username").value),
+        {
+
+        username: document.getElementById("username").value,
+        password: document.getElementById("password").value
+
+        });
+        alert("Login Sucessfull  !");
+        })
+</script>
+    
+</body>
+</html>
